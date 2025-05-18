@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Response: Guides and Tutorials</title>
+  <link rel="stylesheet" href="guides.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-title">
+        <img src="C:\Users\hazel\E-Response\dp.png" alt="E-Response Logo" class="logo">
+        <div class="site-title">E-Response</div>
+      </div>
+      <nav>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="homepage.html">Home</a></li>
+          <li class="dropdown">
+            <button class="dropdown-btn" id="menu-dropdown-btn">Menu</button>
+            <div class="dropdown-content" id="menu-dropdown">
+              <a href="preparedness.html">Preparedness</a>
+              <a href="emergency_contacts.html">Emergency Contacts</a>
+              <a href="guides.html" class="active">Guides and Tutorials</a>
+              <a href="login.html" class="logout-btn">Log Out</a>
+
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title-section">
+    <h1>Emergency Response Guides and Tutorials</h1>
+    <p class="quote">"Knowledge is power, knowledge is safety, knowledge is happiness." – Thomas Jefferson</p>
+  </div>
+
+  <div class="tutorials-container">
+    <div class="card" onclick="openModal('modal1')">
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal1.jfif" alt="Jaw Injury Bandage" class="thumbnail" />
+      <div class="card-content">
+        <a href="#" class="card-title">Jaw Injury Bandage Technique</a>
+        <p class="card-source">Singapore Emergency Responder Academy</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('modal2')">
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal2.webp" alt="Protect During Earthquake" class="thumbnail" />
+      <div class="card-content">
+        <a href="#" class="card-title">How to Protect Yourself During an Earthquake</a>
+        <p class="card-source">National Disaster Management</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('modal3')">
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal3.jpg" alt="How to Treat a Fracture" class="thumbnail" />
+      <div class="card-content">
+        <a href="#" class="card-title">First Aid for Fractures: Assessment and Treatment</a>
+        <p class="card-source">Medical First Responders</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('modal4')">
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal4.jfif" alt="The Earthquake Plan" class="thumbnail" />
+      <div class="card-content">
+        <a href="#" class="card-title">The Comprehensive Earthquake Preparedness Plan</a>
+        <p class="card-source">Emergency Management Institute</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('modal5')">
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal5.jpg" alt="CPR Technique" class="thumbnail" />
+      <div class="card-content">
+        <a href="#" class="card-title">Basic CPR: The Chain of Survival</a>
+        <p class="card-source">American Heart Association</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('modal6')">
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal6.jfif" alt="Home Fire Safety" class="thumbnail" />
+      <div class="card-content">
+        <a href="#" class="card-title">Home Fire Safety and Evacuation Planning</a>
+        <p class="card-source">National Fire Protection Association</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals with instructions and audio/video options -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <div class="modal-header">
+        <h2>Jaw Injury Bandage Technique</h2>
+      </div>
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal01.png" alt="Jaw Injury Bandaging Demonstration">
+      
+      <div class="instructions" id="instructions-modal1">
+        <h3>Step-by-Step Instructions:</h3>
+        <ol>
+          <li>Ensure the patient is sitting comfortably and can breathe properly.</li>
+          <li>Place the center of the bandage under the chin.</li>
+          <li>Bring both ends up and cross them over the top of the head.</li>
+          <li>Take the ends around to the back of the head and cross them again.</li>
+          <li>Bring the ends forward and secure with a knot or safety pin at the front.</li>
+          <li>Check that the bandage is secure but not too tight.</li>
+          <li>Monitor the patient for any signs of breathing difficulty.</li>
+        </ol>
+      </div>
+      
+      <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=2ffYeuTjjvI" target="_blank" class="video-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+            <path d="M10 8L16 12L10 16V8Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Watch Video Tutorial
+        </a>
+        <button class="audio-button" onclick="playAudio('modal1')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 5.93C20.9447 7.80528 21.9979 10.3489 21.9979 13C21.9979 15.6511 20.9447 18.1947 19.07 20.07" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Listen to Instructions
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <div class="modal-header">
+        <h2>Protecting Yourself During an Earthquake</h2>
+      </div>
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal02.png" alt="Earthquake Safety Demonstration">
+      
+      <div class="instructions" id="instructions-modal2">
+        <h3>What to Do During an Earthquake:</h3>
+        <ul>
+          <li><strong>Drop:</strong> Get down on your hands and knees to prevent falling.</li>
+          <li><strong>Cover:</strong> Cover your head and neck with your arms. If possible, crawl under a sturdy desk or table.</li>
+          <li><strong>Hold On:</strong> Hold on to your shelter until the shaking stops.</li>
+          <li>If there's no table or desk nearby, crouch against an interior wall away from windows.</li>
+          <li>Stay indoors until the shaking stops and you're sure it's safe to exit.</li>
+          <li>If you're outdoors, move to a clear area away from buildings, trees, and power lines.</li>
+        </ul>
+      </div>
+      
+      <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=2ffYeuTjjvI" target="_blank" class="video-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+            <path d="M10 8L16 12L10 16V8Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Watch Video Tutorial
+        </a>
+        <button class="audio-button" onclick="playAudio('modal2')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 5.93C20.9447 7.80528 21.9979 10.3489 21.9979 13C21.9979 15.6511 20.9447 18.1947 19.07 20.07" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Listen to Instructions
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <div class="modal-header">
+        <h2>First Aid for Fractures</h2>
+      </div>
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal03.png" alt="Fracture First Aid Demonstration">
+      
+      <div class="instructions" id="instructions-modal3">
+        <h3>How to Treat a Suspected Fracture:</h3>
+        <ol>
+          <li><strong>Assess the situation:</strong> Check for bleeding, deformity, and pain level.</li>
+          <li><strong>Immobilize the area:</strong> Prevent movement of the injured body part.</li>
+          <li><strong>Apply a splint if available:</strong> Use firm materials to stabilize the fracture.</li>
+          <li><strong>Control bleeding:</strong> Apply gentle pressure with a clean cloth if necessary.</li>
+          <li><strong>Apply cold compress:</strong> Reduce swelling with an ice pack (15 minutes on, 15 minutes off).</li>
+          <li><strong>Elevate the injury:</strong> If possible, raise the injured area above heart level.</li>
+          <li><strong>Seek medical help:</strong> All suspected fractures should be evaluated by medical professionals.</li>
+        </ol>
+      </div>
+      
+      <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=2ffYeuTjjvI" target="_blank" class="video-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+            <path d="M10 8L16 12L10 16V8Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Watch Video Tutorial
+        </a>
+        <button class="audio-button" onclick="playAudio('modal3')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 5.93C20.9447 7.80528 21.9979 10.3489 21.9979 13C21.9979 15.6511 20.9447 18.1947 19.07 20.07" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Listen to Instructions
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <div class="modal-header">
+        <h2>The Earthquake Preparedness Plan</h2>
+      </div>
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal04.png" alt="Earthquake Preparedness Diagram">
+      
+      <div class="instructions" id="instructions-modal4">
+        <h3>Before an Earthquake:</h3>
+        <ul>
+          <li>Create an emergency plan and share it with all household members.</li>
+          <li>Prepare an emergency kit with water, food, medications, and essential supplies.</li>
+          <li>Secure heavy furniture and appliances to walls.</li>
+          <li>Know where and how to shut off utilities (gas, water, electricity).</li>
+          <li>Identify safe spots in each room (under sturdy furniture, against interior walls).</li>
+          <li>Practice earthquake drills regularly with your family or household.</li>
+        </ul>
+        
+        <h3>After an Earthquake:</h3>
+        <ul>
+          <li>Check for injuries and provide first aid if needed.</li>
+          <li>Inspect your home for damage, especially gas leaks and electrical issues.</li>
+          <li>Listen to emergency radio for instructions and updates.</li>
+          <li>Expect and prepare for aftershocks.</li>
+          <li>Use phones only for emergency calls.</li>
+        </ul>
+      </div>
+      
+      <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=2ffYeuTjjvI" target="_blank" class="video-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+            <path d="M10 8L16 12L10 16V8Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Watch Video Tutorial
+        </a>
+        <button class="audio-button" onclick="playAudio('modal4')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 5.93C20.9447 7.80528 21.9979 10.3489 21.9979 13C21.9979 15.6511 20.9447 18.1947 19.07 20.07" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Listen to Instructions
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+      <div class="modal-header">
+        <h2>Basic CPR: The Chain of Survival</h2>
+      </div>
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal05.png" alt="CPR Demonstration">
+      
+      <div class="instructions" id="instructions-modal5">
+        <h3>Adult CPR Steps:</h3>
+        <ol>
+          <li><strong>Check for responsiveness:</strong> Tap the person and shout "Are you okay?"</li>
+          <li><strong>Call for help:</strong> Have someone call emergency services immediately.</li>
+          <li><strong>Check for breathing:</strong> Look, listen, and feel for breathing for no more than 10 seconds.</li>
+          <li><strong>Begin chest compressions:</strong> Place hands in center of chest, compress at least 2 inches deep.</li>
+          <li><strong>Compression rate:</strong> Push hard and fast at a rate of 100-120 compressions per minute.</li>
+          <li><strong>Rescue breaths:</strong> After 30 compressions, give 2 rescue breaths (if trained).</li>
+          <li><strong>Continue CPR:</strong> Maintain cycles of 30 compressions and 2 breaths until help arrives.</li>
+          <li><strong>Use AED:</strong> If available, turn it on and follow the verbal instructions.</li>
+        </ol>
+        
+        <h3>Remember:</h3>
+        <ul>
+          <li>Proper hand position is key: center of chest, between nipples</li>
+          <li>Allow chest to fully recoil between compressions</li>
+          <li>Minimize interruptions in compressions</li>
+          <li>If untrained, perform hands-only CPR (compressions without rescue breaths)</li>
+        </ul>
+      </div>
+      
+      <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=2ffYeuTjjvI" target="_blank" class="video-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+            <path d="M10 8L16 12L10 16V8Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Watch Video Tutorial
+        </a>
+        <button class="audio-button" onclick="playAudio('modal5')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 5.93C20.9447 7.80528 21.9979 10.3489 21.9979 13C21.9979 15.6511 20.9447 18.1947 19.07 20.07" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Listen to Instructions
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal6')">&times;</span>
+      <div class="modal-header">
+        <h2>Home Fire Safety and Evacuation Planning</h2>
+      </div>
+      <img src="C:\Users\krist\Downloads\E-Response\images\modal06.png" alt="Home Fire Safety Diagram">
+      
+      <div class="instructions" id="instructions-modal6">
+        <h3>Fire Prevention Tips:</h3>
+        <ul>
+          <li>Install smoke alarms on every level of your home and test them monthly.</li>
+          <li>Keep flammable items at least three feet from heat sources.</li>
+          <li>Never leave cooking unattended.</li>
+          <li>Check electrical cords for damage and don't overload outlets.</li>
+          <li>Keep portable heaters at least three feet from anything that can burn.</li>
+          <li>Have your heating system serviced annually by a qualified professional.</li>
+        </ul>
+        
+        <h3>Creating a Home Escape Plan:</h3>
+        <ol>
+          <li><strong>Draw a floor plan</strong> of your home showing all possible exits.</li>
+          <li><strong>Mark two ways out</strong> of each room, including windows and doors.</li>
+          <li><strong>Designate a meeting place</strong> outside where everyone will gather.</li>
+          <li><strong>Practice your fire drill</strong> both during day and night.</li>
+          <li><strong>If smoke is present,</strong> get low and go under the smoke to exit.</li>
+          <li><strong>Remember:</strong> Once you get out, stay out. Never go back inside a burning building.</li>
+        </ol>
+      </div>
+      
+      <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=2ffYeuTjjvI" target="_blank" class="video-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+            <path d="M10 8L16 12L10 16V8Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Watch Video Tutorial
+        </a>
+        <button class="audio-button" onclick="playAudio('modal6')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 5.93C20.9447 7.80528 21.9979 10.3489 21.9979 13C21.9979 15.6511 20.9447 18.1947 19.07 20.07" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Listen to Instructions
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 E-Response. All rights reserved.</p>
+  </footer>
+
+  <script src="guides.js" defer></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const logoutButton = document.querySelector('.logout-btn');
+
+      // Handle logout
+      if (logoutButton) {
+        logoutButton.addEventListener('click', function(event) {
+          event.preventDefault();
+          // Update login state
+          localStorage.setItem('isLoggedIn', 'false');
+          // Broadcast logout event
+          localStorage.setItem('logout-event', Date.now());
+          // Redirect to login
+          window.location.href = 'login.html';
+        });
+      }
+
+      // Listen for storage events (login/logout across tabs)
+      window.addEventListener('storage', function(event) {
+        if (event.key === 'logout-event') {
+          // Another tab logged out
+          window.location.href = 'login.html';
+        }
+        if (event.key === 'login-event') {
+          // Another tab logged in
+          window.location.reload(); // Reload current tab to reflect login
+        }
+      });
+
+      // Redirect if not logged in
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (isLoggedIn !== 'true' && !window.location.href.includes('login.html')) {
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const logoutButton = document.querySelector('.logout-btn');
+
+    // Handle logout
+    if (logoutButton) {
+      logoutButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Update login state
+        localStorage.setItem('isLoggedIn', 'false');
+        // Broadcast logout event
+        localStorage.setItem('logout-event', Date.now());
+        // Redirect to login
+        window.location.href = 'login.html';
+      });
+    }
+
+    // Listen for storage events (login/logout across tabs)
+    window.addEventListener('storage', function(event) {
+      if (event.key === 'logout-event') {
+        // Another tab logged out
+        window.location.href = 'login.html';
+      }
+      if (event.key === 'login-event') {
+        // Another tab logged in
+        window.location.reload(); // Reload current tab to reflect login
+      }
+    });
+
+    // Redirect if not logged in
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn !== 'true' && !window.location.href.includes('login.html')) {
+      window.location.href = 'login.html';
+    }
+  });
+</script>
+
+</body>
+</html>

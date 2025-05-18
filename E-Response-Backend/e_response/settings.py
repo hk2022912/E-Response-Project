@@ -75,7 +75,7 @@ ROOT_URLCONF = 'e_response.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'Final-Website'],  # 👉 Add this line
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,6 +86,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'e_response.wsgi.application'
 
@@ -147,4 +148,3 @@ DEFAULT_FROM_EMAIL = 'noreply@yourdomain.com'
 # settings.py
 
 SITE_DOMAIN = "http://192.168.1.113:8000"  # or your domain name
-

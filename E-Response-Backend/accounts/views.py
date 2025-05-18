@@ -164,3 +164,8 @@ class ProtectedView(APIView):
     def get(self, request):
         return Response({"message": "You have access!"})
     
+    # accounts/views.py
+from django.shortcuts import render
+
+def login_page(request):
+    return render(request, 'login.html')

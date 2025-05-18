@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="homepage.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Response - Earthquake Emergency Response</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EResponse - Earthquake Preparedness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-container">
+      <div class="logo-title">
+        <img src="dp.png" alt="E-Response Logo" class="logo" />
+        <h1 class="site-title">E-Response</h1>
+      </div>
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="homepage.html">Home</a></li>
+          <li class="dropdown">
+            <button class="dropdown-btn" id="menu-dropdown-btn">Menu</button>
+            <div class="dropdown-content" id="menu-dropdown">
+              <a href="preparedness.html">Preparedness</a>
+              <a href="emergency_contacts.html">Emergency Contacts</a>
+              <a href="guides.html">Guides and Tutorials</a>
+              <a href="#" class="logout-btn">Log Out</a>
+            </div>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay-text">
+      <p>
+        Earthquakes often damage critical infrastructure such as roads, bridges, hospitals, and power lines, severely hampering rescue operations and emergency response. E-Response helps communities prepare and respond effectively.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="news">
+    <div class="container">
+      <h2>Recent Earthquake News</h2>
+      <button class="fetch-btn" onclick="fetchEarthquakeNews()">Show Latest Earthquakes</button>
+      <div id="newsContainer" class="card-grid"></div>
+    </div>
+  </section>
+
+
+  <section class="info-section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">🏠</div>
+          <h3>Prepare Your Home</h3>
+          <p>Learn how to secure furniture, prepare emergency kits, and make your home safer during earthquakes.</p>
+          <a href="preparedness.html" class="info-link">Learn More</a>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🚨</div>
+          <h3>Emergency Response</h3>
+          <p>Know what to do during and immediately after an earthquake to protect yourself and your loved ones.</p>
+          <a href="emergency_contacts.html" class="info-link">Learn More</a>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📱</div>
+          <h3>Alert Systems</h3>
+          <p>Stay informed with early warning systems and emergency notifications for earthquake-prone areas.</p>
+          <a href="guides.html" class="info-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>E-Response</h3>
+          <p>Dedicated to earthquake preparedness, response, and community resilience since 2020.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">f<i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon">t<i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon">in<i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Emergency Resources</a></li>
+            <li><a href="#">Preparedness</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Emergency Contacts</a></li>
+            <li><a href="#">Preparedness Guides</a></li>
+            <li><a href="#">Educational Materials</a></li>
+            <li><a href="#">Community Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li>Email: info@e-response.org</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: 123 Emergency Ave, Safety City</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 E-Response. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const channel = new BroadcastChannel('auth-channel');
+ 
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const menuDropdownBtn = document.getElementById('menu-dropdown-btn');
+      const menuDropdown = document.getElementById('menu-dropdown');
+      const logoutButton = document.querySelector('.logout-btn');
+ 
+      // Check if user is logged in
+      if (localStorage.getItem('isLoggedIn') !== 'true') {
+        window.location.href = 'login.html';
+      }
+ 
+      // Toggle menu
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function () {
+          navMenu.classList.toggle('active');
+        });
+      }
+ 
+      // Toggle dropdown
+      if (menuDropdownBtn) {
+        menuDropdownBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          menuDropdown.classList.toggle('show');
+        });
+      }
+ 
+      document.body.addEventListener('click', function () {
+        if (menuDropdown && menuDropdown.classList.contains('show')) {
+          menuDropdown.classList.remove('show');
+        }
+      });
+ 
+      if (menuDropdown) {
+        menuDropdown.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      }
+ 
+      // Handle logout
+      if (logoutButton) {
+        logoutButton.addEventListener('click', function (event) {
+          event.preventDefault();
+          localStorage.setItem('isLoggedIn', 'false');
+          channel.postMessage('logged-out');
+          window.location.href = 'login.html';
+        });
+      }
+ 
+      // Listen for login/logout across tabs
+      channel.onmessage = (event) => {
+        if (event.data === 'logged-out') {
+          localStorage.setItem('isLoggedIn', 'false');
+          window.location.href = 'login.html';
+        } else if (event.data === 'logged-in') {
+          localStorage.setItem('isLoggedIn', 'true');
+          if (!window.location.href.includes('homepage.html')) {
+            window.location.href = 'homepage.html';
+          }
+        }
+      };
+    });
+ 
+    // Earthquake News Function (unchanged)
+    async function fetchEarthquakeNews() {
+      const newsContainer = document.getElementById('newsContainer');
+      newsContainer.innerHTML = "<div class='loading'><span class='loading-animation'></span>Loading earthquake data...</div>";
+ 
+      const endpoint = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson";
+ 
+      try {
+        const response = await fetch(endpoint);
+        const data = await response.json();
+        newsContainer.innerHTML = "";
+ 
+        if (data.features.length === 0) {
+          newsContainer.innerHTML = "<div class='no-data'>No significant earthquakes reported this week.</div>";
+          return;
+        }
+ 
+        data.features.forEach(eq => {
+          const magnitude = eq.properties.mag;
+          let magnitudeClass = 'low';
+ 
+          if (magnitude >= 6.0) {
+            magnitudeClass = 'high';
+          } else if (magnitude >= 5.0) {
+            magnitudeClass = 'medium';
+          }
+ 
+          const date = new Date(eq.properties.time);
+          const formattedDate = date.toLocaleString();
+          const place = eq.properties.place;
+ 
+          const item = document.createElement('div');
+          item.className = 'news-item';
+          item.innerHTML = `
+            <div class="news-item-header">
+              <h3>${place}</h3>
+            </div>
+            <div class="news-item-body">
+              <div class="news-item-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📊</span>
+                  <span><strong>Magnitude:</strong> <span class="magnitude ${magnitudeClass}">${magnitude}</span></span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🕒</span>
+                  <span><strong>Time:</strong> ${formattedDate}</span>
+                </div>
+              </div>
+              <p>${eq.properties.title}</p>
+            </div>
+            <div class="news-item-footer">
+              <a href="${eq.properties.url}" target="_blank">View Full Details</a>
+            </div>
+          `;
+          newsContainer.appendChild(item);
+        });
+      } catch (error) {
+        console.error("Error fetching earthquake data:", error);
+        newsContainer.innerHTML = "<div class='no-data'>Failed to load earthquake data. Please try again later.</div>";
+      }
+    }
+ 
+    // Fetch earthquake news on page load
+    fetchEarthquakeNews();
+  </script>
+
+ 
+</body>
+</html>
